@@ -33,3 +33,288 @@ main{max-width:760px;margin:auto;padding:4px 16px 70px}
 .tag{background:#000a;border-radius:99px;padding:2px 10px;font-size:.75rem}
 .hrow{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
 .ci{flex:0 0 110px;cursor:pointer}.ci b,.card b{display:block;font-size:.85rem;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ci small,.card small{color:var(--mute);font-size:.75rem}
+.cp,.poster{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px;display:block;background:var(--line)}
+.ph{display:grid;place-items:center;font:700 3rem Georgia,serif;background:linear-gradient(160deg,#2B4857,#FF7A59);color:#fff}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:14px 0 10px;padding-bottom:4px}
+.chips button{flex:0 0 auto;border:1px solid var(--line);background:none;border-radius:99px;padding:6px 14px;cursor:pointer;color:var(--mute)}
+.chips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+#list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(min-width:560px){#list{grid-template-columns:repeat(4,1fr)}}
+.card{cursor:pointer}.pw{position:relative}
+.eb,.fv{position:absolute;top:6px;background:#000b;border-radius:99px;padding:1px 8px;font-size:.7rem}
+.eb{left:6px}.fv{right:6px;color:var(--acc)}
+.empty{color:var(--mute);text-align:center;padding:40px 0;grid-column:1/-1}
+dialog{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:16px;width:min(92vw,520px);padding:18px}
+dialog::backdrop{background:#000a}
+#dlgD{margin:auto auto 0;width:100%;max-width:560px;max-height:90dvh;overflow-y:auto;padding:0;border-radius:18px 18px 0 0;position:relative}
+.dp{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;display:block}
+.db{padding:14px 16px 20px}.db h2{font:700 1.4rem Georgia,serif;margin:0}.g{color:var(--acc);font-size:.85rem}.db p{color:var(--mute);margin:8px 0 12px}
+.eg{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:8px;margin:14px 0}
+.eg button{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 0;cursor:pointer}
+.x2{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:1.1rem;cursor:pointer}
+label{display:block;margin:10px 0 4px;font-size:.9rem;color:var(--mute)}
+input[type=text],input:not([type]),textarea,select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px}
+.bar{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin-top:10px;display:none}.bar i{display:block;height:100%;width:0;background:var(--acc)}
+#feed{display:none;position:fixed;inset:0;z-index:50;background:#000;overflow-y:scroll;scroll-snap-type:y mandatory;overscroll-behavior:contain}
+.slide{height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;background:#000}
+.slide video{width:100%;height:100%;object-fit:contain;background:#000}
+.cap{position:absolute;left:16px;right:70px;bottom:calc(64px + env(safe-area-inset-bottom));display:flex;flex-direction:column;text-shadow:0 1px 6px #000;pointer-events:none}
+.cap b{font:700 1.2rem Georgia,serif}.cap span{font-size:.85rem;color:#ddd}
+#feed .x{position:fixed;top:calc(12px + env(safe-area-inset-top));right:14px;z-index:60;width:42px;height:42px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:1.2rem;cursor:pointer}
+.seekw{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;color:#fff;font-size:.75rem;text-shadow:0 1px 4px #000}
+.seek{flex:1;height:34px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;touch-action:none;cursor:pointer}
+.seek::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:#ffffff59}
+.seek::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);margin-top:-7px}
+.seek::-moz-range-track{height:4px;border-radius:4px;background:#ffffff59}
+.seek::-moz-range-thumb{width:18px;height:18px;border:0;border-radius:50%;background:var(--acc)}
+#chatBtn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:20;width:54px;height:54px;border-radius:50%;border:0;background:var(--acc);font-size:1.5rem;cursor:pointer;box-shadow:0 4px 14px #0008}
+#dlgC{margin:auto auto 0;width:100%;max-width:560px;height:80dvh;padding:0;border-radius:18px 18px 0 0;flex-direction:column}
+#dlgC[open]{display:flex}
+.ch{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.ch b{font:700 1.1rem Georgia,serif;flex:1}
+#msgs{flex:1;overflow-y:auto;padding:10px 14px;display:flex;flex-direction:column;gap:10px}
+.m{background:var(--bg);border-radius:12px;padding:8px 12px;max-width:92%;word-break:break-word}
+.m b{font-size:.85rem}.m small{color:var(--mute);margin-left:6px;font-size:.7rem}
+.m div{margin-top:2px}.m .ad{background:var(--acc);color:#1a0d08;border-radius:6px;padding:0 6px;font-size:.65rem;margin-left:6px}
+.m .dl{background:none;border:0;color:var(--mute);cursor:pointer;float:right}
+#cf{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+#cf #cn{grid-column:1/-1}
+</style>
+</head>
+<body>
+<header>
+  <h1>Kalkal</h1>
+  <div class="row"><button class="btn adm" id="add">+ Drama</button><button class="btn ghost" id="login">Admin</button></div>
+</header>
+<main>
+  <input id="q" type="search" placeholder="Maghanap ng drama..." aria-label="Maghanap">
+  <div id="msg"></div>
+  <div id="hero"></div>
+  <div id="cont"></div>
+  <div class="chips" id="chips"></div>
+  <div id="list"></div>
+</main>
+
+<dialog id="dlgAdd"><form method="dialog" id="frm">
+  <h2 style="margin:0 0 4px;font-family:Georgia,serif">Bagong drama</h2>
+  <label for="t">Pamagat</label><input id="t" required maxlength="120">
+  <label for="g">Genre</label>
+  <select id="g"><option>Romance</option><option>Pamilya</option><option>Thriller</option><option>Katatakutan</option><option>Komedya</option><option>Sci-fi</option></select>
+  <label for="s">Buod</label><textarea id="s" rows="3" maxlength="300"></textarea>
+  <label for="p">Cover (larawan)</label><input id="p" type="file" accept="image/*">
+  <label for="v">Mga episode (video, hanggang 100 MB bawat isa)</label><input id="v" type="file" accept="video/*" multiple>
+  <div class="bar" id="bar"><i></i></div>
+  <div class="row" style="margin-top:14px;justify-content:flex-end">
+    <button class="btn ghost" value="cancel" formnovalidate>Kanselahin</button>
+    <button class="btn" value="ok">I-save</button>
+  </div>
+</form></dialog>
+
+<button id="chatBtn" aria-label="Chat">💬</button>
+<dialog id="dlgC" aria-label="Chat ng Kalkal">
+  <div class="ch"><b>Chat ng Kalkal</b><button class="btn ghost" id="cx">Isara</button></div>
+  <div id="msgs"></div>
+  <form id="cf">
+    <input id="cn" maxlength="24" placeholder="Pangalan mo" aria-label="Pangalan">
+    <input id="ct" maxlength="300" placeholder="Mag-type ng mensahe..." autocomplete="off" aria-label="Mensahe">
+    <button class="btn" id="cs">Ipadala</button>
+  </form>
+</dialog>
+<dialog id="dlgD" aria-label="Detalye"></dialog>
+<div id="feed" aria-label="Panoorin"></div>
+
+<script>
+const API='https://kalkal-api.spaceboy69xxx.workers.dev';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const vurl=k=>API+'/api/video/'+encodeURIComponent(k);
+const fmt=t=>{t=Math.max(0,t|0);return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')};
+const ls=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
+let key=localStorage.getItem('adminKey')||'',filter='all',data=[];
+let favs=new Set(ls('favs',[])),prog=ls('prog',{});
+const saveLocal=()=>{localStorage.setItem('favs',JSON.stringify([...favs]));localStorage.setItem('prog',JSON.stringify(prog))};
+const msg=t=>$('msg').textContent=t||'';
+const auth=()=>({Authorization:'Bearer '+key});
+
+const getList=async()=>{const r=await fetch(API+'/api/dramas',{cache:'no-store'});if(!r.ok)throw new Error('Hindi ma-load ang listahan');return r.json()};
+const saveList=async l=>{const r=await fetch(API+'/api/dramas',{method:'PUT',headers:{...auth(),'Content-Type':'application/json'},body:JSON.stringify(l)});if(!r.ok)throw new Error('Hindi na-save ang listahan ('+r.status+')')};
+const delVideo=k=>fetch(API+'/api/video/'+encodeURIComponent(k),{method:'DELETE',headers:auth()});
+const upload=(k,f,onp)=>new Promise((res,rej)=>{const x=new XMLHttpRequest();
+  x.open('PUT',vurl(k));x.setRequestHeader('Authorization','Bearer '+key);x.setRequestHeader('Content-Type',f.type||'video/mp4');
+  x.upload.onprogress=e=>e.lengthComputable&&onp(e.loaded/e.total);
+  x.onload=()=>x.status<300?res():rej(new Error('Hindi na-upload ('+x.status+')'));
+  x.onerror=()=>rej(new Error('Walang koneksyon'));x.send(f)});
+const pick=(acc='video/*',m=true)=>new Promise(res=>{const i=document.createElement('input');i.type='file';i.accept=acc;i.multiple=m;i.onchange=()=>res([...i.files]);i.click()});
+const shrink=f=>new Promise((res,rej)=>{const img=new Image();img.onload=()=>{const w=Math.min(720,img.width),h=Math.round(img.height*w/img.width),c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);c.toBlob(b=>b?res(b):rej(new Error('Hindi ma-process ang larawan')),'image/jpeg',.82)};img.onerror=()=>rej(new Error('Hindi mabasa ang larawan'));img.src=URL.createObjectURL(f)});
+const uploadCover=async(id,f)=>{const k=`${id}-cover-${Date.now()}.jpg`;await upload(k,await shrink(f),()=>{});return k};
+const ext=f=>(f.name.split('.').pop()||'mp4').replace(/\W/g,'').toLowerCase();
+const bar=p=>{const b=$('bar');b.style.display='block';b.firstElementChild.style.width=Math.round(p*100)+'%'};
+async function uploadEps(id,files){
+  const eps=[];
+  for(let i=0;i<files.length;i++){
+    const k=`${id}-${Date.now()}-${i}.${ext(files[i])}`;
+    msg(`Ina-upload ang ${files[i].name} (${i+1}/${files.length})...`);
+    await upload(k,files[i],p=>bar((i+p)/files.length));
+    eps.push({key:k,name:files[i].name});
+  }
+  return eps;
+}
+
+const pimg=(d,c)=>d.poster?`<img class="${c}" loading="lazy" alt="${esc(d.title)}" src="${vurl(d.poster)}">`:`<div class="${c} ph">${esc((d.title[0]||'K').toUpperCase())}</div>`;
+
+async function load(){
+  if(API.includes('YOUR-SUBDOMAIN')){msg('Ilagay muna ang Worker URL sa index.html (API).');return}
+  try{msg('Naglo-load...');data=await getList();msg('')}catch(e){msg(e.message+'. Subukan ulit mamaya.')}
+  render();
+}
+function render(){
+  const q=$('q').value.trim().toLowerCase();
+  const genres=[...new Set(data.map(d=>d.genre))];
+  $('chips').innerHTML=['all','fav',...genres].map(g=>`<button data-g="${esc(g)}" class="${g===filter?'on':''}">${g==='all'?'Lahat':g==='fav'?'★ Paborito':esc(g)}</button>`).join('');
+  const d=data.filter(x=>(filter==='all'||(filter==='fav'?favs.has(x.id):x.genre===filter))&&(!q||(x.title+' '+(x.synopsis||'')).toLowerCase().includes(q)));
+  const home=filter==='all'&&!q;
+  const f=home&&data.find(x=>x.poster&&x.eps.length);
+  $('hero').innerHTML=f?`<div class="hero" data-id="${esc(f.id)}">${pimg(f,'hp')}<div class="hs"></div><div class="ht"><span class="tag">${esc(f.genre)}</span><h2>${esc(f.title)}</h2><div class="row"><button class="btn" data-a="watch">▶ Panoorin</button><button class="btn ghost" data-a="info">Detalye</button></div></div></div>`:'';
+  const c=home?data.filter(x=>prog[x.id]&&x.eps[prog[x.id].ep]):[];
+  $('cont').innerHTML=c.length?`<h3>Ituloy ang panonood</h3><div class="hrow">${c.map(x=>`<div class="ci" data-id="${esc(x.id)}" data-a="watch">${pimg(x,'cp')}<b>${esc(x.title)}</b><small>Ep ${prog[x.id].ep+1} · ${fmt(prog[x.id].t)}</small></div>`).join('')}</div>`:'';
+  $('list').innerHTML=d.length?d.map(x=>`<div class="card" data-id="${esc(x.id)}" data-a="info"><div class="pw">${pimg(x,'poster')}<span class="eb">${x.eps.length} ep</span>${favs.has(x.id)?'<span class="fv">★</span>':''}</div><b>${esc(x.title)}</b><small>${esc(x.genre)}</small></div>`).join(''):'<div class="empty">Walang nakita.</div>';
+}
+function openInfo(id){
+  const d=data.find(x=>x.id===id);if(!d)return;const dl=$('dlgD');dl.dataset.id=id;
+  dl.innerHTML=`<button class="x2" data-close aria-label="Isara">✕</button>${pimg(d,'dp')}<div class="db"><h2>${esc(d.title)}</h2><div class="g">${esc(d.genre)} · ${d.eps.length} ep</div><p>${esc(d.synopsis||'')}</p>
+   <div class="row"><button class="btn" data-a="watch">▶ ${prog[id]?'Ituloy':'Simulan'}</button><button class="btn ghost" data-a="fav">${favs.has(id)?'★ Paborito':'☆ Paborito'}</button><button class="btn ghost" data-a="share">Ibahagi</button></div>
+   <div class="eg">${d.eps.map((e,i)=>`<button data-a="ep" data-i="${i}">${i+1}</button>`).join('')}</div>
+   <div class="row"><button class="btn ghost adm" data-a="up">+ Ep</button><button class="btn ghost adm" data-a="cover">Cover</button><button class="btn ghost adm" data-a="del">Burahin</button></div></div>`;
+  if(!dl.open)dl.showModal();
+}
+$('dlgD').addEventListener('click',e=>{if(e.target===$('dlgD'))$('dlgD').close()});
+
+document.addEventListener('click',async e=>{
+  if(e.target.closest('[data-close]')){$('dlgD').close();return}
+  const g=e.target.closest('[data-g]');if(g){filter=g.dataset.g;render();return}
+  const b=e.target.closest('[data-a]');if(!b)return;
+  const h=b.closest('[data-id]');if(!h)return;
+  const id=h.dataset.id,d=data.find(x=>x.id===id),a=b.dataset.a;if(!d)return;
+  try{
+    if(a==='info'){openInfo(id);return}
+    if(a==='watch'){const p=prog[id];$('dlgD').close();p&&d.eps[p.ep]?openFeed(id,p.ep,p.t):openFeed(id,0,0);return}
+    if(a==='ep'){$('dlgD').close();openFeed(id,+b.dataset.i,0);return}
+    if(a==='fav'){favs.has(id)?favs.delete(id):favs.add(id);saveLocal()}
+    if(a==='share'){const u=location.href.split('#')[0];if(navigator.share)navigator.share({title:d.title,text:`Panoorin ang "${d.title}" sa Kalkal`,url:u}).catch(()=>{});else{await navigator.clipboard.writeText(u);msg('Na-copy ang link.');setTimeout(msg,2000)}return}
+    if(a==='up'){const f=await pick();if(!f.length)return;const eps=await uploadEps(id,f);data=await getList();data.find(x=>x.id===id).eps.push(...eps);await saveList(data);msg('Na-upload na.');setTimeout(msg,2500)}
+    if(a==='cover'){const [f]=await pick('image/*',false);if(!f)return;msg('Ina-upload ang cover...');const k=await uploadCover(id,f);data=await getList();const t=data.find(x=>x.id===id),old=t.poster;t.poster=k;await saveList(data);if(old)delVideo(old);msg('')}
+    if(a==='del'&&confirm(`Burahin ang "${d.title}"?`)){await Promise.all([...d.eps.map(x=>x.key),d.poster].filter(Boolean).map(delVideo));data=(await getList()).filter(x=>x.id!==id);await saveList(data);$('dlgD').close()}
+  }catch(err){msg(err.message)}
+  render();if($('dlgD').open)openInfo(id);
+});
+
+function openFeed(did,ei,st){
+  const flat=[];data.forEach(d=>d.eps.forEach((e,i)=>flat.push({d,e,i})));
+  const start=Math.max(0,flat.findIndex(x=>x.d.id===did&&x.i===ei));
+  const f=$('feed');
+  f.innerHTML='<button class="x" id="fx" aria-label="Isara">✕</button>'+flat.map((x,n)=>
+    `<section class="slide" data-n="${n}"><video playsinline preload="none" data-src="${vurl(x.e.key)}"></video><div class="cap"><b>${esc(x.d.title)}</b><span>Ep ${x.i+1}, ${esc(x.d.genre)}</span></div><div class="seekw"><span class="tm">0:00</span><input class="seek" type="range" min="0" max="1000" value="0" aria-label="I-forward o i-rewind"><span class="tm dur">0:00</span></div></section>`).join('');
+  f.querySelectorAll('.slide').forEach(sl=>{
+    const x=flat[+sl.dataset.n],v=sl.querySelector('video'),r=sl.querySelector('.seek'),a=sl.querySelector('.tm'),b=sl.querySelector('.dur');let drag=false,last=0;
+    v.addEventListener('timeupdate',()=>{
+      if(!v.duration)return;
+      if(!drag){r.value=v.currentTime/v.duration*1000;a.textContent=fmt(v.currentTime)}
+      if(Math.abs(v.currentTime-last)>2){last=v.currentTime;prog[x.d.id]={ep:x.i,t:v.currentTime};saveLocal()}
+    });
+    v.addEventListener('loadedmetadata',()=>{b.textContent=fmt(v.duration)});
+    v.addEventListener('ended',()=>{
+      if(x.i+1<x.d.eps.length)prog[x.d.id]={ep:x.i+1,t:0};else delete prog[x.d.id];saveLocal();
+      const nx=sl.nextElementSibling;if(nx)nx.scrollIntoView({behavior:'smooth'});
+    });
+    r.addEventListener('input',()=>{drag=true;if(v.duration)a.textContent=fmt(r.value/1000*v.duration)});
+    r.addEventListener('change',()=>{if(v.duration)v.currentTime=r.value/1000*v.duration;drag=false});
+  });
+  f.style.display='block';document.body.style.overflow='hidden';
+  const io=new IntersectionObserver(es=>es.forEach(en=>{
+    const v=en.target.querySelector('video');
+    if(en.isIntersecting){
+      if(!v.src){v.src=v.dataset.src;if(+en.target.dataset.n===start&&st)v.addEventListener('loadedmetadata',()=>{v.currentTime=st},{once:true})}
+      v.play().catch(()=>{});
+      const nx=en.target.nextElementSibling&&en.target.nextElementSibling.querySelector('video');
+      if(nx&&!nx.src){nx.preload='auto';nx.src=nx.dataset.src}
+    }else v.pause();
+  }),{root:f,threshold:.7});
+  f.querySelectorAll('.slide').forEach(s=>io.observe(s));
+  f._io=io;
+  f.querySelector(`[data-n="${start}"]`).scrollIntoView();
+  f.onclick=e=>{const v=e.target.closest('video');if(v)v.paused?v.play():v.pause()};
+  $('fx').onclick=closeFeed;
+}
+function closeFeed(){
+  const f=$('feed');if(f._io)f._io.disconnect();
+  f.querySelectorAll('video').forEach(v=>{v.pause();v.removeAttribute('src');v.load()});
+  f.style.display='none';f.innerHTML='';document.body.style.overflow='';render();
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFeed()});
+
+$('add').onclick=()=>{$('frm').reset();$('bar').style.display='none';$('dlgAdd').showModal()};
+$('frm').addEventListener('submit',async e=>{
+  if(e.submitter.value!=='ok')return;
+  e.preventDefault();
+  const id='d'+Date.now(),files=[...$('v').files];
+  try{
+    const poster=$('p').files[0]?await uploadCover(id,$('p').files[0]):'';
+    const eps=await uploadEps(id,files);
+    data=await getList();
+    data.unshift({id,poster,title:$('t').value.trim(),genre:$('g').value,synopsis:$('s').value.trim(),eps});
+    await saveList(data);msg('Na-publish na.');setTimeout(msg,2500);
+  }catch(err){msg(err.message)}
+  $('dlgAdd').close();render();
+});
+$('q').oninput=render;
+
+function setAdmin(on){document.body.classList.toggle('admin',on);$('login').textContent=on?'Mag-logout':'Admin'}
+$('login').onclick=async()=>{
+  if(key){key='';localStorage.removeItem('adminKey');setAdmin(false);return}
+  const k=prompt('Admin password:');if(!k)return;
+  const r=await fetch(API+'/api/auth',{method:'POST',headers:{Authorization:'Bearer '+k}}).catch(()=>null);
+  if(r&&r.ok){key=k;localStorage.setItem('adminKey',k);setAdmin(true)}else alert('Mali ang password o hindi maabot ang server.');
+};
+// ---- Chat para sa lahat ----
+let chatTimer=null;
+const when=t=>new Date(t).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+async function loadChat(force){
+  try{
+    const r=await fetch(API+'/api/chat',{cache:'no-store'});if(!r.ok)return;
+    const l=await r.json(),box=$('msgs');
+    const bottom=box.scrollHeight-box.scrollTop-box.clientHeight<60;
+    box.innerHTML=l.length?l.map(m=>`<div class="m"><button class="dl adm" data-del="${esc(m.id)}" aria-label="Burahin">🗑</button><b>${esc(m.name)}</b>${m.admin?'<span class="ad">Admin</span>':''}<small>${when(m.t)}</small><div>${esc(m.text)}</div></div>`).join(''):'<div class="empty">Wala pang usapan. Mauna ka!</div>';
+    if(force||bottom)box.scrollTop=box.scrollHeight;
+  }catch(e){}
+}
+$('chatBtn').onclick=()=>{
+  $('cn').value=localStorage.getItem('chatName')||'';$('dlgC').showModal();loadChat(true);
+  clearInterval(chatTimer);chatTimer=setInterval(()=>{if(!document.hidden)loadChat()},5000);
+};
+$('cx').onclick=()=>$('dlgC').close();
+$('dlgC').addEventListener('close',()=>clearInterval(chatTimer));
+$('dlgC').addEventListener('click',e=>{if(e.target===$('dlgC'))$('dlgC').close()});
+$('msgs').addEventListener('click',async e=>{
+  const b=e.target.closest('[data-del]');if(!b||!confirm('Burahin ang mensaheng ito?'))return;
+  await fetch(API+'/api/chat/'+encodeURIComponent(b.dataset.del),{method:'DELETE',headers:auth()}).catch(()=>{});
+  loadChat();
+});
+$('cf').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const name=$('cn').value.trim(),text=$('ct').value.trim();
+  if(!name){$('cn').focus();return}if(!text)return;
+  localStorage.setItem('chatName',name);$('cs').disabled=true;
+  try{
+    const r=await fetch(API+'/api/chat',{method:'POST',headers:{...auth(),'Content-Type':'application/json'},body:JSON.stringify({name,text})});
+    if(r.ok){$('ct').value='';await loadChat(true)}else{const j=await r.json().catch(()=>({}));alert(j.error||'Hindi naipadala')}
+  }catch(err){alert('Walang koneksyon')}
+  setTimeout(()=>{$('cs').disabled=false},1500);
+});
+
+if(key)setAdmin(true);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
+load();
+</script>
+</body>
+</html>
