@@ -1,23 +1,17 @@
 {
+  "name": "Tangke",
+  "short_name": "Tangke",
+  "description": "3D top-view tank shooter, 10 stages",
   "id": "./",
-  "name": "Kalkal",
-  "short_name": "Kalkal",
-  "description": "Manood ng mga AI short drama, isang swipe lang.",
   "start_url": "./",
   "scope": "./",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
-  "background_color": "#14232B",
-  "theme_color": "#14232B",
-  "lang": "fil",
-  "categories": ["entertainment"],
+  "background_color": "#1b1f12",
+  "theme_color": "#1b1f12",
   "icons": [
     {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
     {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
-  ],
-  "screenshots": [
-    {"src": "shot1.png", "sizes": "1080x2400", "type": "image/png", "form_factor": "narrow", "label": "Listahan ng mga drama"},
-    {"src": "shot2.png", "sizes": "1080x2400", "type": "image/png", "form_factor": "narrow", "label": "Swipe feed"}
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
   ]
 }
